@@ -1,6 +1,6 @@
 import logo from './logo.svg';
-import React from 'react';
-import Button from 'Button';
+import React from 'react'
+import Button from './Button'
 
 class App extends React.Component {
   constructor(props){
@@ -26,9 +26,13 @@ class App extends React.Component {
       <div>
         <h1>{this.state.name}</h1>
         <h3>{this.state.age}</h3>
+        <button onClick={this.handlerChangeNames}>
+          {'Click to change'}
+        </button>
         
-      <h1>{name}</h1>
-      <h2>{age}</h2>
+        <Button>
+          
+        </Button>
       </div>
 
       
