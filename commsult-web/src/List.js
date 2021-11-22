@@ -9,12 +9,16 @@ export default function List({data, handleEdit,handleDelete, checked, setChecked
       {
         data.map((contact) => {
           return (
-            <div className="list-group-item list-group-item-action">
+            <div>
+              <br/>
+              <div className="list-group-item list-group-item-action">
               <div className="d-flex w-100 justify-content-between">
               {checked && <>
-                <h4 className="mb-1">{contact.name}</h4>
-                <h4 className="mb-1">{contact.umur}</h4>
-              
+                
+                <h4 className="mb-1">{contact.name} </h4>
+                
+                <h4 className="mb-1"> {contact.umur}</h4>
+                
                 <Button
                 variant="contained"
                 type="submit"
@@ -27,12 +31,17 @@ export default function List({data, handleEdit,handleDelete, checked, setChecked
                 onClick={() => handleDelete(contact.id)}
                 >Delete
                 </Button>
+                
                 <FormControlLabel  control={<Checkbox />} label="Konfirmasi" />
                 
               </>}
+              
               </div>
               
             </div>
+
+            </div>
+            
           )
         })
       }

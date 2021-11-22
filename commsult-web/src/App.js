@@ -103,9 +103,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Guest List</h1>
       
-      <form onSubmit={handleSubmit} className="px-3 py-4">
+      
+      <form onSubmit={handleSubmit} className="px-3 py-4" style={{border:"2px solid black" }}>
+      <h1 style={{textAlign:"center" }}> Guest List</h1><br/><br/>
       <Grid container spacing={2}>
         <Grid item xs={6} md={6}>
         <TextField
@@ -128,7 +129,8 @@ function App() {
           name="umur" />
         </Grid>
         <Grid item xs={12} md={12}>
-        <Button variant="contained" type="submit">Simpan</Button>
+        <br/>
+        <Button variant="contained" style={{left:"39%"}} type="submit">Simpan</Button>
         </Grid>
       </Grid>
         <br></br>
@@ -142,5 +144,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
